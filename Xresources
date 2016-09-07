@@ -1,0 +1,9 @@
+Xft.dpi:       96
+Xft.antialias: true
+Xft.rgba:      rgb
+Xft.hinting:   true
+Xft.hintsyle:  hintslight
+
+URxvt.reverseVideo: true
+URxvt.font:         xft:Hack:size=16
+URxvt.scrollBar:    false
