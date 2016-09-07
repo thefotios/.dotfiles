@@ -1,0 +1,64 @@
+[color]
+	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = cyan
+[alias]
+	b = branch -vv
+	s = status
+	sp = status --porcelain
+	ci = commit
+	cam = commit -am
+	co = checkout
+	br = branch
+	wc = whatchanged
+	fix = commit --amend -C HEAD
+	d = diff --patience -b
+	dc = diff --cached
+	du = diff -b --patience @{u}
+	lc = log ORIG_HEAD.. --stat --no-merges
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(    %cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	lb = co -
+	up = "!git remote update -p; git merge --ff-only @{u}"
+	pullr = pull --rebase
+	bbbbb = branch -vv
+	bn = !git rev-parse --abbrev-ref --symbolic-full-name @{upstream} | sed 's|/|:|'
+	pr = "!sh -c 'gh pull-request -b ${1-dev} -h $(git bn)' -"
+	cow = "!git log --format='%B -- %an (%ar)' -n 1 | cowsay"
+[core]
+	excludesfile = /home/flindiakos/.gitignore
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	quotepath = off
+	pager = less -F -X
+[merge]
+	tool = vimdiff
+[branch]
+	autosetupmerge = true
+[push]
+	default = simple
+[credentials]
+	helper = cache
+[fetch]
+	prune = true
+[mergetool]
+	prompt = false
+	keepBackup = false
+[diff]
+	algorithm = patience
+	renames = true
+[status]
+	showUntrackedFiles = all
+[reflow]
+	git-server = GitHub
+	always-deploy-and-cleanup = true
