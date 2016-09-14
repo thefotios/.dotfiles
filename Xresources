@@ -5,5 +5,5 @@ Xft.hinting:   true
 Xft.hintsyle:  hintslight
 
 URxvt.reverseVideo: true
-URxvt.font:         xft:Hack:size=16
+URxvt.font:         xft:Hack:size=12
 URxvt.scrollBar:    false
