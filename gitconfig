@@ -62,3 +62,8 @@
 [reflow]
 	git-server = GitHub
 	always-deploy-and-cleanup = true
+[user]
+	email = flindiakos@shutterstock.com
+	name = Fotios Lindiakos
+[hub]
+	host = github.shuttercorp.net
